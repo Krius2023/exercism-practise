@@ -1,7 +1,7 @@
 // https://exercism.org/tracks/typescript/exercises/darts
 
 export function score(x: number, y: number): number {
-  let dart_position = ((x*x) + (y*y)) ** 0.5
+  const dart_position = ((x * x) + (y * y)) ** 0.5;
   switch (true) {
     case dart_position <= 1:
       return 10;
