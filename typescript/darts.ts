@@ -10,7 +10,6 @@ export function score(x: number, y: number): number {
     case dart_position <= 10:
       return 1;
     default:
-      break;
+      return 0;
   }
-  return 0;
 }
