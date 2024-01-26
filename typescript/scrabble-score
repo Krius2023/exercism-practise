@@ -1,0 +1,14 @@
+// https://exercism.org/tracks/typescript/exercises/scrabble-score
+
+const master_scores = ['AEIOULNRST~1', 'DG~2', 'BCMP~3', 'FHVWY~4', 'K~5', 'JX~8', 'QZ~10']
+
+export function score(word: string): number {
+  let score = 0;
+  if(!word?.length) { return score; }
+
+  for (let l of word) {
+    let masterData = master_scores.find(x => x.includes(l.toUpperCase()));
+    if (masterData) { score += Number(masterData.split('~')[1]); }
+  }
+  return score;
+}
